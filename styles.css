@@ -1,0 +1,55 @@
+.toolbar {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.toolbar-button {
+	background: url('icons.png') no-repeat -104px -76px;
+	width: 90px;
+	height: 90px;
+	background-color: rgba(75, 75, 75, 1);
+	border-radius: 50%;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.toolbar-list {
+	background-color: rgba(150, 150, 150, 1);
+	width: 90px; /* It's set to 90px here for animation. */
+	height: 90px;
+	border: 1px solid rgba(150, 150, 150, 1);
+	border-radius: 45px;
+	box-shadow: inset 0 0 3px #000;
+	position: relative;
+	display: none;
+}
+
+.toolbar-list-item {
+	width: 90px;
+	height: 90px;
+	background-color: rgba(75, 75, 75, 1);
+	border-radius: 50%;
+
+	display: inline;
+	position: absolute;
+	font-size: 20px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: rgba(210, 210, 210, 1);
+	text-align: center;
+	line-height: 90px;
+}
+
+.item1 {
+	left: 0px;
+}
+
+.item2 {
+	left: 135px;
+}
+
+.item3 {
+	left: 270px;
+}
