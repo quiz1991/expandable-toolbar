@@ -1,5 +1,6 @@
 .toolbar {
 	position: fixed;
+	float: right;
 	bottom: 0;
 	right: 0;
 }
@@ -52,4 +53,14 @@
 
 .item3 {
 	left: 270px;
+}
+
+.test {
+	background: url('icons.png') no-repeat -104px -76px;
+	width: 90px;
+	height: 90px;
+	background-color: rgba(75, 75, 75, 1);
+	border-radius: 50%;
+	/*left: 0;
+	top: 0;*/
 }
