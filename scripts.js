@@ -1,15 +1,13 @@
 $(document).ready(function() {
 	$(".toolbar").click(function(event) {
-		var toolbarList = $(".toolbar-list");
+		var toolbarList = $(".toolbar-list-right");
 		// toolbarList.animate({width:'toggle'},350);
 		if(toolbarList.data("status") === "folded") {
-			// alert(toolbarList.data("status"));
 			toolbarList.show().animate({width: "495px"}, {duration: 400});
 			toolbarList.data("status", "expanded");
 		}
 		else {
 			toolbarList.show().animate({width: "90px"}, {duration: 400, complete: function() {toolbarList.hide();}});
-			// alert(toolbarList.data("status"));
 			toolbarList.data("status", "folded");
 		}
 	});
@@ -24,6 +22,7 @@ $(document).ready(function() {
 
 	$("body").on("dragover", function(event) {
 		event.preventDefault();  
+		event.stopPropagation();
 	});
 
 	$("body").on("drop", function(event) {
