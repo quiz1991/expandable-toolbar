@@ -7,57 +7,60 @@ body {
 	position: fixed;
 	bottom: 0;
 	right: 0;
+	display: none;
 }
 
-.toolbar-button {
-	background: url('icons.png') no-repeat -104px -76px;
+.toolbar-icon, .toolbar-list {
+	background-color: rgba(190, 190, 190, 1);
+	width: 90px; 
+	height: 90px;
+	padding: 5px;
+	border-radius: 50px;
+	position: relative;
+}
+
+.toolbar-icon-img, .toolbar-list-item {
 	width: 90px;
 	height: 90px;
-	background-color: rgba(75, 75, 75, 1);
 	border-radius: 50%;
 	position: absolute;
-	bottom: 0;
-	right: 0;
-	z-index: 1;
 }
 
-.toolbar-list-right {
-	background-color: rgba(150, 150, 150, 1);
-	width: 90px; /* It's set to 90px here for animation. */
-	height: 90px;
-	border: 1px solid rgba(150, 150, 150, 1);
-	border-radius: 45px;
-	box-shadow: inset 0 0 3px #000;
-	position: relative;
+/* toolbar icon img */
+.toolbar-icon-img {
+	background: url('icons.png') no-repeat -104px -76px;
+	background-color: rgba(50, 50, 50, 1);
+	bottom: 5px;
+	right: 5px;
+}
+
+/* toolbar list and items */
+.toolbar-list {
 	display: none;
 }
 
 .toolbar-list-item {
-	width: 90px;
-	height: 90px;
-	background-color: rgba(75, 75, 75, 1);
-	border-radius: 50%;
-
-	display: inline;
-	position: absolute;
+	background-color: rgba(50, 50, 50, 1);
 	font-size: 20px;
 	font-weight: bold;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	color: rgba(210, 210, 210, 1);
 	text-align: center;
+	line-height: 90px;
 }
 
 .item1 {
-	left: 0px;
-	line-height: 90px;
+	left: 5px;
 }
 
 .item2 {
-	left: 135px;
-	line-height: 90px;
+	left: 125px;
 }
 
 .item3 {
-	left: 270px;
-	line-height: 45px;
+	left: 245px;
+}
+
+.item4 {
+	left: 365px;
 }
