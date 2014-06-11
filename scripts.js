@@ -6,18 +6,13 @@ $(document).ready(function() {
 			$(".toolbar").fadeOut(600);
 	});
 
-	$(".toolbar").click(function(event) {
-		var toolbarList = $(".toolbar-list");
-		// toolbarList.animate({width:'toggle'},350);
-		if(toolbarList.data("status") === "folded") {
-			$(".toolbar-icon").hide();
-			toolbarList.show().animate({width: "450px"}, {duration: 400});
-			toolbarList.data("status", "expanded");
-		}
-		else {
-			toolbarList.show().animate({width: "90px"}, {duration: 400, complete: function() { toolbarList.hide(); $(".toolbar-icon").show(); }});
-			toolbarList.data("status", "folded");
-		}
+	$(".toolbar-icon").click(function() {
+		$(".toolbar-icon").hide();
+		$(".toolbar-list").show().animate({width: "230px"}, {duration: 400});
+	});
+
+	$(".fold-icon").click(function() {
+		$(".toolbar-list").show().animate({width: "50px"}, {duration: 400, complete: function() { $(".toolbar-list").hide(); $(".toolbar-icon").show(); }});
 	});
 
 	// $(".toolbar").on("dragstart", function(event) {
